@@ -1,0 +1,6 @@
+﻿Name: EmuMovies metadata provider
+Author: Spektor
+Version: 1.0
+Module: EmuMoviesMetadata.dll
+Type: MetadataProvider
+Icon: Resources\emumovies.ico
