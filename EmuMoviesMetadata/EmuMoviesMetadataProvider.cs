@@ -30,9 +30,9 @@ namespace EmuMoviesMetadata
 
             if (_options?.GameData != null)
             {
-                if (!string.IsNullOrWhiteSpace(Path.GetFileNameWithoutExtension(_options.GameData.GameImagePath)))
+                if (!string.IsNullOrWhiteSpace(_options.GameData.GameImagePath))
                 {
-                    _gameNames.Add(_options.GameData.GameImagePath);
+                    _gameNames.Add(Path.GetFileNameWithoutExtension(_options.GameData.GameImagePath));
                 }
 
                 if (!string.IsNullOrWhiteSpace(_options.GameData.Name))
