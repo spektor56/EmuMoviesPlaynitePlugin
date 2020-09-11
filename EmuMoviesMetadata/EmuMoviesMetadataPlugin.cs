@@ -152,7 +152,7 @@ namespace EmuMoviesMetadata
         public override Guid Id => Guid.Parse("000001D9-DBD1-46C6-B5D0-B1BD557D10E4");
         public override OnDemandMetadataProvider GetMetadataProvider(MetadataRequestOptions options)
         {
-            return new EmuMoviesLazyMetadataProvider(options, this);
+            return new EmuMoviesMetadataProvider(options, this);
         }
 
         public override string Name { get; } = "EmuMovies";

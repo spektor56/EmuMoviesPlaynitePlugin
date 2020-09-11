@@ -61,7 +61,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="EmuMoviesLazyMetadataProvider.cs" />
+    <Compile Include="EmuMoviesMetadataProvider.cs" />
     <Compile Include="EmuMoviesMetadataPlugin.cs" />
     <Compile Include="EmuMoviesMetadataSettings.cs" />
     <Compile Include="EmuMoviesMetadataSettingsView.xaml.cs">
