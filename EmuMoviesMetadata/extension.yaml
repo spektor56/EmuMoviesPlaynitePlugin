@@ -4,6 +4,9 @@ Version: 1.2
 Module: EmuMoviesMetadata.dll
 Type: MetadataProvider
 Icon: Resources\emumovies.ico
+Links:
+  - Name: Github
+    Url: https://github.com/spektor56/EmuMoviesPlaynitePlugin
 UpdaterConfig:
   GitHubUser: spektor56
   GitHubRepo: EmuMoviesPlaynitePlugin
