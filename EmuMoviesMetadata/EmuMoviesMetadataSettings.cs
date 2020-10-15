@@ -39,17 +39,17 @@ namespace EmuMoviesMetadata
         {
             this._plugin = plugin;
 
-            var settings = plugin.LoadPluginSettings<EmuMoviesMetadataSettings>();
-            if (settings != null)
+            var savedSettings = plugin.LoadPluginSettings<EmuMoviesMetadataSettings>();
+            if (savedSettings != null)
             {
-                LoadValues(settings);
+                RestoreSettings(savedSettings);
             }
 
         }
 
         public void BeginEdit()
         {
-            _editingClone = this.GetClone();
+            _editingClone = new EmuMoviesMetadataSettings(_plugin);
         }
 
         public void EndEdit()
@@ -61,7 +61,7 @@ namespace EmuMoviesMetadata
 
         public void CancelEdit()
         {
-            LoadValues(_editingClone);
+            RestoreSettings(_editingClone);
         }
 
         public bool VerifySettings(out List<string> errors)
@@ -70,9 +70,10 @@ namespace EmuMoviesMetadata
             return true;
         }
 
-        private void LoadValues(EmuMoviesMetadataSettings source)
+        private void RestoreSettings(EmuMoviesMetadataSettings source)
         {
-            source.CopyProperties(this, false, null, true);
+            Username = source.Username;
+            Password = source.Password;
         }
     }
 }
